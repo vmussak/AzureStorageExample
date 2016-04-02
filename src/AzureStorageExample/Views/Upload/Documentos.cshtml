@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Microsoft.WindowsAzure.Storage.Blob.IListBlobItem>
+
+<h1>Documentos</h1>
+
+<ul>
+    @foreach (var item in Model)
+    {
+        <li>
+            <a href="@item.Uri" target="_blank">@item.Uri</a>
+        </li>
+    }
+</ul>
+
+<a class="btn btn-danger" asp-controller="Upload" asp-action="Excluir">Excluir</a>

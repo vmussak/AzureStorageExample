@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Upload";
+}
+
+<div class="row">
+    <form class="form-horizontal" method="post" asp-action="Upload" asp-controller="Upload" enctype="multipart/form-data">
+        <fieldset>
+            <legend>Upload :D</legend>
+
+            <div class="form-group">
+                <label class="col-md-4 control-label" for="arquivo">Arquivo</label>
+                <div class="col-md-4">
+                    <input type="file" id="arquivo" name="arquivo"/>
+                </div>
+            </div>
+        </fieldset>
+
+        <div class="form-group">
+            <div class="col-md-4">
+                <button class="btn btn-primary">
+                    Upload
+                </button>
+            </div>
+        </div>
+
+    </form>
+</div>
+<hr/>
+<div class="row">
+    <a class="btn btn-primary" asp-controller="Upload" asp-action="VerArquivos">Ver documentos</a>
+</div>
