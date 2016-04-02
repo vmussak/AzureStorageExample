@@ -58,7 +58,6 @@ namespace AzureStorageExample.Controllers
 
         public IActionResult VerArquivos()
         {
-
             //Cria um blob client
             CloudBlobClient blobClient = _storageAccount.CreateCloudBlobClient();
 
@@ -98,7 +97,7 @@ namespace AzureStorageExample.Controllers
             //Recupera a referência de um blob chamado 'cliente01'
             CloudBlockBlob blockBlob = container.GetBlockBlobReference("cliente01.pdf");
 
-            //Cria ou substitui o blob com o conteúdo do upload
+            //Exclui o blob caso ele exista
             blockBlob.DeleteIfExists();
 
             return RedirectToAction("VerArquivos");
